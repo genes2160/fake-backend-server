@@ -51,6 +51,42 @@ app.get("/api/*", (req, res) => {
   );
 });
 
+// Ping app for testing connection
+app.post("/api/*", (req, res) => {
+  res.status(200).send(
+    responses(
+      200,
+      {
+        data: [],
+        events: [],
+        id: "324245345453454",
+        image: `./assets/image/noimage`,
+        tracks: [],
+        message: ``,
+      },
+      true
+    )
+  );
+});
+
+// Ping app for testing connection
+app.put("/api/*", (req, res) => {
+  res.status(200).send(
+    responses(
+      200,
+      {
+        data: [],
+        events: [],
+        id: "324245345453454",
+        image: `./assets/image/noimage`,
+        tracks: [],
+        message: ``,
+      },
+      true
+    )
+  );
+});
+
 // Set static folder
 app.use(express.static(path.join(__dirname, "public")));
 
